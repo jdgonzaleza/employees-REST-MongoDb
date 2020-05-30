@@ -5,10 +5,13 @@ import com.gorygon.mongo.api.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Service
+@Validated
 public class EmployeeService implements IEmployeeService{
 	@Autowired
 	private EmployeeRepository employeeRepository;
